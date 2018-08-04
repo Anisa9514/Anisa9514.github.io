@@ -1,0 +1,367 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand|Cinzel|Julius+Sans+One);
+$primary-color: rgb(158, 0, 126);
+$secondary-color: rgb(237, 236, 233);
+$tertiary-color: rgb(51, 51, 51);
+$dark-contrast: rgb(0, 0, 0);
+$light-contrast: rgb(255, 255, 255);
+$header-font: 'Cinzel',
+serif;
+$subheader-font: 'Julius Sans One',
+sans-serif;
+$text-font: 'Quicksand',
+sans-serif;
+@mixin linear-gradient($start, $end) {
+    background: $end;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, $start 0%, $end 80%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, $start 0%, $end 80%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, $start 0%, $end 80%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$start}', endColorstr='#{$end}', GradientType=0);
+}
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: $tertiary-color;
+    border: 1px inset #888;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(175, 174, 174);
+}
+
+* {
+    box-sizing: border-box;
+    color: $light-contrast;
+    font-family: $text-font;
+}
+
+h1,
+h2,
+h3 {
+    font-family: $header-font;
+}
+
+h4,
+h5,
+h6 {
+    font-family: $subheader-font;
+}
+
+body {
+    background-color: $dark-contrast;
+}
+
+.wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    @include linear-gradient($primary-color, $dark-contrast);
+}
+
+.section {
+    margin: auto;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; // border: 4px solid $primary-color;
+}
+
+.section .bg {
+    width: 90%;
+    min-height: 85vh; // border: 4px solid $light-contrast;
+    margin-top: 55px;
+}
+
+.page-break {
+    padding-left: 2rem;
+    border-top: 1px solid $primary-color;
+    border-bottom: 1px double $primary-color;
+    width: 100%;
+}
+
+// Home and nav bar
+#home .bg {
+    border: none;
+    margin: 0px;
+}
+
+#home .fa {
+    color: white;
+    border: 1px solid white;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 5px 10px;
+}
+
+#home .fa:hover {
+    cursor: pointer;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+#home .bg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading {
+    font-size: 150%;
+    text-align: center;
+    h1 {
+        margin-bottom: 0.5rem;
+    }
+    p {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        color: $secondary-color;
+    }
+}
+
+.nav {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    transition: all 0.5s ease;
+    span:hover,
+    a:hover {
+        background-color: rgba(237, 236, 233, 0.2);
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
+
+.nav-fixed {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 5px $primary-color;
+    @include linear-gradient($tertiary-color, $dark-contrast); // background-color: $dark-contrast;
+    // border: 1px solid $light-contrast;
+    width: 100%;
+    font-size: 80%;
+    .fa {
+        border-radius: 0 !important;
+        border: none !important;
+    }
+}
+
+.nav>div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    span {
+        padding: 5px 15px;
+    }
+}
+
+// About
+.about-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-carousel {
+    width: 90%;
+    height: 550px;
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: hidden;
+}
+
+.about-carousel-item {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    min-height: 100%;
+    overflow-y: auto;
+    background-color: $tertiary-color;
+    border: 2px solid $primary-color;
+    * {
+        width: 75%;
+    }
+    h1,
+    h2 {
+        text-align: center;
+    }
+    p,
+    li {
+        text-align: justify;
+        font-size: 1.5rem;
+        padding: 0 5px;
+    }
+    ul {
+        list-style-type: square;
+        li {
+            padding: 1rem;
+        }
+    }
+}
+
+$carousel-button-width: 75px;
+$carousel-button-height: 25%;
+$carousel-button-bg-color: rgba(255, 255, 255, 0.25);
+$carousel-button-color: rgba(0, 0, 0, 1);
+.carousel-arrow-right {
+    position: absolute;
+    right: 0;
+    width: $carousel-button-width;
+    height: $carousel-button-height;
+    background-color: $carousel-button-bg-color;
+    color: $carousel-button-color;
+}
+
+.carousel-arrow-left {
+    position: absolute;
+    left: 0;
+    width: $carousel-button-width;
+    height: $carousel-button-height;
+    background-color: $carousel-button-bg-color;
+    color: $carousel-button-color;
+}
+
+.carousel-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-arrow:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.carousel-arrow-right .fa,
+.carousel-arrow-left .fa {
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 100px;
+}
+
+// Accordion styling
+.accordion-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.accordion-item {
+    margin: 2px;
+    padding: 5px;
+    width: 99.75%;
+    background-color: rgb(51, 47, 47);
+    border: 1px solid rgb(209, 209, 236);
+    transition: all 0.2s ease-out;
+    .accordion-header {
+        padding-left: 10px;
+        .header-title {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            h2,
+            h4 {
+                margin-bottom: 0;
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+        }
+        p {
+            margin: 0 1rem 1rem 1rem;
+        }
+    }
+}
+
+.accordion-item .accordion-header:hover {
+    cursor: pointer;
+}
+
+.collapsible {
+    margin: 5px;
+    padding: 25px;
+    width: 97%;
+    overflow: auto;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    background-color: rgb(85, 79, 79);
+    border-radius: 5px;
+    visibility: hidden;
+}
+
+.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+// Skills List styling
+.skills-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills {
+    width: 99%;
+    height: 550px;
+    background-color: $tertiary-color;
+    display: flex;
+    flex-flow: row nowrap;
+    overflow-y: auto;
+    .skills-list {
+        width: 100%;
+        padding: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        .skills-list-header li{
+            padding: 0.3rem;
+        }
+    }
+}

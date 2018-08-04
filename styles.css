@@ -1,0 +1,297 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand|Cinzel|Julius+Sans+One);
+/* width */
+::-webkit-scrollbar {
+  width: 10px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #333333;
+  border: 1px inset #888; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #afaeae; }
+
+* {
+  box-sizing: border-box;
+  color: white;
+  font-family: "Quicksand", sans-serif; }
+
+h1,
+h2,
+h3 {
+  font-family: "Cinzel", serif; }
+
+h4,
+h5,
+h6 {
+  font-family: "Julius Sans One", sans-serif; }
+
+body {
+  background-color: black; }
+
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: black;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #9e007e 0%, black 80%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #9e007e 0%, black 80%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #9e007e 0%, black 80%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9e007e', endColorstr='black', GradientType=0); }
+
+.section {
+  margin: auto;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.section .bg {
+  width: 90%;
+  min-height: 85vh;
+  margin-top: 55px; }
+
+.page-break {
+  padding-left: 2rem;
+  border-top: 1px solid #9e007e;
+  border-bottom: 1px double #9e007e;
+  width: 100%; }
+
+#home .bg {
+  border: none;
+  margin: 0px; }
+
+#home .fa {
+  color: white;
+  border: 1px solid white;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2rem;
+  border-radius: 50%;
+  margin: 5px 10px; }
+
+#home .fa:hover {
+  cursor: pointer; }
+
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+#home .bg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.heading {
+  font-size: 150%;
+  text-align: center; }
+  .heading h1 {
+    margin-bottom: 0.5rem; }
+  .heading p {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #edece9; }
+
+.nav {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  transition: all 0.5s ease; }
+  .nav span:hover,
+  .nav a:hover {
+    background-color: rgba(237, 236, 233, 0.2);
+    font-weight: bold;
+    cursor: pointer; }
+
+.nav-fixed {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 2px 5px #9e007e;
+  background: black;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #333333 0%, black 80%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #333333 0%, black 80%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #333333 0%, black 80%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='black', GradientType=0);
+  width: 100%;
+  font-size: 80%; }
+  .nav-fixed .fa {
+    border-radius: 0 !important;
+    border: none !important; }
+
+.nav > div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center; }
+  .nav > div span {
+    padding: 5px 15px; }
+
+.about-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.about-carousel {
+  width: 90%;
+  height: 550px;
+  display: flex;
+  flex-flow: row nowrap;
+  overflow: hidden; }
+
+.about-carousel-item {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  min-height: 100%;
+  overflow-y: auto;
+  background-color: #333333;
+  border: 2px solid #9e007e; }
+  .about-carousel-item * {
+    width: 75%; }
+  .about-carousel-item h1,
+  .about-carousel-item h2 {
+    text-align: center; }
+  .about-carousel-item p,
+  .about-carousel-item li {
+    text-align: justify;
+    font-size: 1.5rem;
+    padding: 0 5px; }
+  .about-carousel-item ul {
+    list-style-type: square; }
+    .about-carousel-item ul li {
+      padding: 1rem; }
+
+.carousel-arrow-right {
+  position: absolute;
+  right: 0;
+  width: 75px;
+  height: 25%;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: black; }
+
+.carousel-arrow-left {
+  position: absolute;
+  left: 0;
+  width: 75px;
+  height: 25%;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: black; }
+
+.carousel-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.carousel-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer; }
+
+.carousel-arrow-right .fa,
+.carousel-arrow-left .fa {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 100px; }
+
+.accordion-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; }
+
+.accordion-item {
+  margin: 2px;
+  padding: 5px;
+  width: 99.75%;
+  background-color: #332f2f;
+  border: 1px solid #d1d1ec;
+  transition: all 0.2s ease-out; }
+  .accordion-item .accordion-header {
+    padding-left: 10px; }
+    .accordion-item .accordion-header .header-title {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between; }
+      .accordion-item .accordion-header .header-title h2,
+      .accordion-item .accordion-header .header-title h4 {
+        margin-bottom: 0;
+        margin-left: 1rem;
+        margin-right: 1rem; }
+    .accordion-item .accordion-header p {
+      margin: 0 1rem 1rem 1rem; }
+
+.accordion-item .accordion-header:hover {
+  cursor: pointer; }
+
+.collapsible {
+  margin: 5px;
+  padding: 25px;
+  width: 97%;
+  overflow: auto;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  background-color: #554f4f;
+  border-radius: 5px;
+  visibility: hidden; }
+
+.show {
+  opacity: 1;
+  visibility: visible; }
+
+.skills-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.skills {
+  width: 99%;
+  height: 550px;
+  background-color: #333333;
+  display: flex;
+  flex-flow: row nowrap;
+  overflow-y: auto; }
+  .skills .skills-list {
+    width: 100%;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none; }
+    .skills .skills-list .skills-list-header li {
+      padding: 0.3rem; }
+
+/*# sourceMappingURL=styles.css.map */

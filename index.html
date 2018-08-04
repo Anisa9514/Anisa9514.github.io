@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" charset="UTF-8" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="section" id="home">
+            <div class="bg">
+                <div class="heading">
+                    <h1>Angelique Bautista</h1>
+                    <p>angelique18ibautista@utexas.edu</p>
+                </div>
+                <div class="nav">
+                    <div class="page-links">
+                        <span onclick="moveTo('#home')">
+                            <h2>Home</h2>
+                        </span>
+                        <span onclick="moveTo('#about')">
+                            <h2>About Me</h2>
+                        </span>
+                        <span onclick="moveTo('#exp')">
+                            <h2>Experience</h2>
+                        </span>
+                        <span onclick="moveTo('#skills')">
+                            <h2>Skills</h2>
+                        </span>
+                        <span onclick="moveTo('#contact')">
+                            <h2>Contact</h2>
+                        </span>
+                    </div>
+                    <div class="url-links">
+                        <a href="https://www.linkedin.com/in/angelique-bautista-2019/" target="_blank" class="fa fa-linkedin"></a>
+                        <a href="https://codepen.io/Anisa95/" target="_blank" class="fa fa-codepen"></a>
+                        <a href="https://github.com/Anisa9514" target="_blank" class="fa fa-github"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-break">
+            <h1>About Me</h1>
+        </div>
+        <div class="section" id="about">
+            <div class="bg">
+                <div class="about-wrapper">
+                    <div class="carousel-arrow carousel-arrow-left" onclick="scrollCarouselLeft()">
+                        <span class="fa fa-angle-double-left"></span>
+                    </div>
+                    <div class="about-carousel">
+                        <div class="about-carousel-item">
+                            <h1>Me in a nutshell</h1>
+                            <p>
+                                I am a graduating biomedical engineering major at the University of Texas at Austin with a passion for web development and
+                                currently looking for full-time opportunities in software with an amphasis on web programming.
+                            </p>
+                        </div>
+                        <div class="about-carousel-item">
+                            <h1>My Path</h1>
+                            <h2>Biomedical engineering => Web Development ?</h2>
+                            <p>
+                                My fascination with biology led me to choose biomedical engineering as my major. I quickly learned, however, that while learning
+                                the theory was great, I was not a big fan of lab work
+                            </p>
+                            <p>
+                                Luckily for me, biomedical engineering covers a lot of disciplines, one of which is software. I quickly developed an interest
+                                in programming. I loved the ability to solve a problem needing only a computer and some creative
+                                thinking.
+                            </p>
+                        </div>
+                        <div class="about-carousel-item">
+                            <h1>My Path Continued</h1>
+                            <p>
+                                I then took a software engineering co-op where I got involved in some projects involving web development, and I was hooked.
+                                A lot of what I did focused on front end, which I felt was the perfect combination of design
+                                and programming.
+                            </p>
+                            <p>
+                                It was when I started spending most of my free time looking up resources on web development that I realized this is the career
+                                path I wanted to go to, and I have not looked back since.
+                            </p>
+                        </div>
+                        <div class="about-carousel-item">
+                            <h1>Things Important to Me</h1>
+                            <ul>
+                                <li>Friends and family</li>
+                                <li>Continuous learning and self-improvement</li>
+                                <li>Having a purpose and goal to strive for</li>
+                                <li>Work life balance</li>
+                            </ul>
+                        </div>
+                        <div class="about-carousel-item">
+                            <h1>My Hobbies</h1>
+                            <ul>
+                                <li>Watching Friends on Netflix</li>
+                                <li>Drawing (both traditional and digital media)</li>
+                                <li>Spending time with friends and family</li>
+                                <li>Attempting to cook</li>
+                                <li>Reading random web development resources</li>
+                                <li>Doing mini side projects</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="carousel-arrow carousel-arrow-right" onclick="scrollCarouselRight()">
+                        <span class=" fa fa-angle-double-right"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-break">
+            <h1>Experience</h1>
+        </div>
+        <div class="section" id="exp">
+            <div class="bg">
+                <div class="accordion-wrapper">
+                    <div class="accordion-item" onclick="expandAccordionItem(event)">
+                        <div class="accordion-header">
+                            <span class="header-title">
+                                <h2 class="job-title">Software Engineering Co-op</h2>
+                                <h4 class="company">Abbott (Formerly St. Jude Medical)</h4>
+                            </span>
+                            <p class="dates">June 2017 - December 2017 (6.5 months)</p>
+                        </div>
+                        <div class="collapsible">
+                            <p>
+                                <i>
+                                    Abbott is a top healthcare company with a broad range of products from diagnostics to nutrition to medical devices. I worked
+                                    in their neuromodulation division in Plano. My department handled the manufacture of
+                                    pulse generators that send controlled bursts of stimulation to nerves within the body
+                                    to alleviate diseases like chronic pain. These generators are configured through an iOS
+                                    app that communicate with the surgically implanted generators through bluetooth.
+                                </i>
+                            </p>
+                            <p>
+                                Throughout my co-op, I had been involved in projects with different teams within the department:
+                                <ul>
+                                    <li>
+                                        I worked with the firmware team to automate their manual test suite, increasing productivity by allowing their tests to be
+                                        run overnight without manual intervention
+                                        <i>(C Programming, IVI Drivers)</i>
+                                    </li>
+                                    <li>
+                                        I worked with the software testing team to automate verification testing for the iOS neuromodulation app.
+                                        <i>(C# Programming, Ranorex Test Automation, Visual Basic)</i>
+                                    </li>
+                                    <li>
+                                        Within the co-op team, I was in charge of maintaining a task manager web application that we use to keep track of our weekly
+                                        sprints
+                                        <i>(HTML, CSS, Javascript, PHP, SQL)</i>
+                                    </li>
+                                    <li>
+                                        My main project involved creating the front end web interface for an equipment tracker application. The app would make it
+                                        easier to account for where resources are allocated within the department.
+                                        <i>(HTML, CSS, Javascript, Vue, Vuex)</i>
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item" onclick="expandAccordionItem(event)">
+                        <div class="accordion-header">
+                            <span class="header-title">
+                                <h2 class="job-title">Front End Development Intern</h2>
+                                <h4 class="company">Rocket Software</h4>
+                            </span>
+                            <p class="dates">June 2018 - August 2018 (2.5 months)</p>
+                        </div>
+                        <div class="collapsible">
+                            <p>
+                                <i>
+                                    Rocket Software is a software development firm that focuses on optimizing business processes and infrastructure. I worked
+                                    in their Austin office where we focus on modernizing development experience on mainframe
+                                    computers
+                                </i>
+                            </p>
+                            <p>
+                                I worked as a user interface developer, using both the Angular and React frameworks. My responsibilities included the following:
+                                <ul>
+                                    <li>
+                                        Creating reusable Angular UI components for the Carbon Design System library
+                                        <i>(HTML, CSS, Javascript, Angular 4)</i>
+                                    </li>
+                                    <li>
+                                        Ensure functionality of Angular components by creating and running unit tests for each component
+                                        <i>(Javascript, Jasmine, Karma)</i>
+                                    </li>
+                                    <li>
+                                        Creating functional web pages using React from Mocks
+                                        <i>(HTML, CSS, Javascript, React, Redux)</i>
+                                    </li>
+                                    <li>
+                                        Ensure functionality of web pages by creating and running unit tests for each page
+                                        <i>(Javascript, Jest, Enzyme)</i>
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-item" onclick="expandAccordionItem(event)">
+                        <div class="accordion-header">
+                            <span class="header-title">
+                                <h2 class="job-title">Product Engineering Intern</h2>
+                                <h4 class="company">Nano Global</h4>
+                            </span>
+                            <p class="dates">January 2018 - May 2018 (4 months)</p>
+                        </div>
+                        <div class="collapsible">
+                            <p>
+                                <i>
+                                    Nano Global is a relatively small startup in Austin with a goal of curing all diseases by making molecular health data easily
+                                    available and accessible. I worked with the product engineering team to do exploratory
+                                    research on future product integrations for the acquired molecular data.
+                                </i>
+                            </p>
+                            <p>
+                                This internship gave me valuable experience in the product development and design process. It was a largely research oriented
+                                internship that exposed me to the process of developing a medical device product at its start.
+                                <ul>
+                                    <li>
+                                        In the first part of the internship, I worked as the data platform lead for two teams exploring two different products. My
+                                        responsibilities included the following:
+                                        <ul>
+                                            <li>researched available data platforms for spectroscopy and microscopy</li>
+                                            <li>Created proposals for possible products</li>
+                                            <li>Wrote user requirements docs for </li>
+                                        </ul>
+                                        <i>(Documentation: User Requirements Document, User Needs, Project Proposal, Validation
+                                            Plan)
+                                        </i>
+                                    </li>
+                                    <li>
+                                        The second part of the internship involved individual research projects on different sources of molecular data. My responsibilities
+                                        included the following:
+                                        <ul>
+                                            <li>research genomics, from the instrumentation used to acquire data to data platforms
+                                                available to view the data</li>
+                                            <li>consolidate research into clear and concise documentation</li>
+                                            <i>(Research and Documentation)</i>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-break">
+            <h1>Skills</h1>
+        </div>
+        <div class="section" id="skills">
+            <div class="bg">
+                <div class="skills-wrapper">
+                    <div class="skills">
+                        <ul class="skills-list">
+                            <li class="skills-list-header">
+                                <h2>Web Development</h2>
+                                <ul>
+                                    <li>
+                                        Javascript
+                                        <ul>
+                                            <li>Frameworks
+                                                <ul>
+                                                    <li>React</li>
+                                                    <li>Angular 4</li>
+                                                    <li>Vue</li>
+                                                </ul>
+                                            </li>
+                                            <li>Testing
+                                                <ul>
+                                                    <li>Jasmine</li>
+                                                    <li>Karma</li>
+                                                    <li>Jest</li>
+                                                    <li>Enzyme</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>PHP</li>
+                                </ul>
+                            </li>
+                            <li class="skills-list-header">
+                                <h2>General Programming Languages</h2>
+                                <ul>
+                                    <li>Java
+                                        <ul>
+                                            <li>JavaFX</li>
+                                            <li>Junit</li>
+                                        </ul>
+                                    </li>
+                                    <li>C++
+                                        <ul>
+                                            <li>QT</li>
+                                        </ul>
+                                    </li>
+                                    <li>C</li>
+                                    <li>C#</li>
+                                </ul>
+                            </li>
+                            <li class="skills-list-header">
+                                <h2>Documentation</h2>
+                                <ul>
+                                    <li>User Requirements</li>
+                                    <li>Project Proposals</li>
+                                    <li>Project Validation Plan</li>
+                                    <li>Design Documentation</li>
+                                    <li>Verification Testing</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-break">
+            <h1>Contact</h1>
+        </div>
+        <div class="section" id="contact">
+            <div class="bg">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script charset="UTF-8" src="script.js"></script>
+
+</html>
