@@ -363,5 +363,76 @@ $carousel-button-color: rgba(0, 0, 0, 1);
         .skills-list-header li{
             padding: 0.3rem;
         }
+        .score{
+            position: absolute;
+            padding-left: 2rem;
+            * {
+                padding: 0 0.1rem;
+            }
+            .fa.fa-adjust{
+                transform: rotate(180deg);
+            }
+            .far{
+                transform: scale(0.85)
+            }
+        }
     }
+}
+
+// Projects
+.projects{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    overflow: auto;
+
+    .buttons {
+        display: flex;
+        width: 95%;
+        margin: auto;
+        justify-content: space-between;
+    }
+
+    .buttons > a {
+        width: 7rem;
+        height: 3rem;
+        margin: 0.5rem;
+        text-align: center;
+        background-color: rgba(255,255,255,0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    .buttons > a:hover {
+        background-color: rgba(255,255,255,0.50);
+    }
+}
+
+.projects > div {
+    min-width: 15rem;
+    min-height: 20rem;
+    width: 25%;
+    height: 40%;
+    background-color: rgb(51, 51, 51);
+    margin: 0 2rem;
+    padding: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+}
+
+.projects > div:hover {
+    background-color: rgba(255,255,255,0.30);
+}
+
+.projects .heading{
+    background-color: rgba(255,255,255,0.25);
+    padding: 1rem;
+}
+
+.projects .short-content{
+    text-align: center; 
+    font-style: italic;
 }

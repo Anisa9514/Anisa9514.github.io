@@ -114,3 +114,27 @@ function calcAccordionHeights() {
             expanded: accordionWrapperHeight - (accordionItemHeight * (accordionHiddenItems.length - 1))
         };
 }
+
+// Render Skills Ratings
+var scores = document.querySelectorAll('.score');
+for(let score of scores){
+    let scoreArr = score.textContent.split('/');
+    let scoreNum = scoreArr[0];
+    let total = scoreArr[1];
+
+    let newElem = document.createElement('div');
+
+    for(let i = 1; i <= total; i++){
+        let newSpan = document.createElement('span');
+        if(i <= Math.floor(scoreNum)){
+            newSpan.className = 'fa fa-circle';
+        } else if( i > scoreNum && i - 1 < scoreNum ){
+            newSpan.className = 'fa fa-adjust';
+        } else {
+            newSpan.className = 'far fa-circle';/*  */
+        }
+            newElem.appendChild(newSpan);
+    }
+    score.textContent = '';
+    score.appendChild(newElem);
+}
